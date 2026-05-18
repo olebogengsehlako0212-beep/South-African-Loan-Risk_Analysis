@@ -7,14 +7,14 @@ Which borrower characteristics most strongly predict loan default risk in a Sout
 
 ## Tools Used
 - SQLite (DB Browser) 
-- SQL — joins, aggregations, CASE statements, window functions, CTEs
+- SQL: joins, aggregations, CASE statements, window functions, CTEs
 - Power BI (dashboard in progress)
 
 ## Database Structure
 Three related tables:
-- applicants — borrower demographics, income, employment type, province
-- loans — loan amount, term, interest rate, purpose
-- repayments — payment history, missed payments, repayment status
+- applicants: borrower demographics, income, employment type, province
+- loans: loan amount, term, interest rate, purpose
+- repayments: payment history, missed payments, repayment status
 
 ## Key Findings
 
@@ -42,7 +42,7 @@ All Western Cape borrowers in this dataset are current or settled. This reflects
 6. Default rate by income band
 7. Default rate by loan term
 8. Default rate by number of dependants
-9. Full borrower risk profile,CTE combining income, loan purpose, and repayment history into a single risk flag per borrower
+9. Full borrower risk profile,CTE combining income, loan purpose, and repayment history into a single risk flag/bucket per applicant
 
 ## Note on Data
 This project uses a synthetic dataset designed to reflect realistic South African lending demographics and default patterns. A follow-up project applying the same methodology to the Home Credit Default Risk dataset (Kaggle) is planned.
