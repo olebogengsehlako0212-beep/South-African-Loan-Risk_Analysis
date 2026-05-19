@@ -2,7 +2,7 @@
 SELECT 
 	applicants.province,
 	COUNT(*) as total_loans,
-	SUM( CASE WHEN repayments.status = 'ddefaulted' THEN 1 ELSE 0 END) as total_defaults,
+	SUM( CASE WHEN repayments.status = 'defaulted' THEN 1 ELSE 0 END) as total_defaults,
 	100.0* SUM( CASE WHEN repayments.status = 'defaulted' THEN 1 ELSE 0 END) / COUNT(*) as default_rate
 FROM applicants
 LEFT JOIN loans ON applicants.applicant_id = loans.applicant_id
